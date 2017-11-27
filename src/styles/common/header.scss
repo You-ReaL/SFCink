@@ -1,0 +1,64 @@
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Sawarabi Mincho', serif;
+    transition: .3s;
+    -webkit-text-size-adjust: 100%;
+}
+
+#headernav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  background: #223355;
+  padding: 12px 0;
+
+  img {
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    width: 209px;
+    height: 36px;
+    transition: .5s;
+    opacity: 1;
+  }
+
+  ul,li {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    position: absolute;
+      top: 12px;
+      right: 40px;
+      display: inline-block;
+      width: 960px;
+      height: 36px;
+      transition: .5s;
+
+      a:nth-child(1) li {
+        border-left: none;
+      }
+
+      li:hover {
+        background: rgba(255,255,255,0.85);
+        color: #223355;
+      }
+
+      li {
+        width: 120px;
+        height: 100%;
+        color: white;
+        font-size: 0.9em;
+        float: left;
+        border-left: solid 1px white;
+        line-height: 36px;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+      }
+  }
+}
