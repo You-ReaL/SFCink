@@ -7,7 +7,7 @@
     "build": "run-p build:*",
     "build:pug": "pug src/templates --out dist --silent",
     "build:scss": "node-sass src/styles --output-style nested --output dist/styles",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist/styles dist/layouts",
     "prewatch": "npm run build",
     "watch": "run-p watch:*",
     "watch:pug": "pug --watch src/templates --out dist --silent",

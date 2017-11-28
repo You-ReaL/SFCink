@@ -1,6 +1,72 @@
 doctype html
 head
-    link(rel='stylesheet' href='styles/main.css')
+  link(rel='stylesheet' href='styles/common/reset.css')
+  link(rel='stylesheet' href='styles/main.css')
 body
   include layouts/header
-  h1 Hello, world!
+  .top
+    img(src='./imgs/')
+  #contents
+    h2 コース
+    #courses.content
+      .course.course1
+        .pic
+          img(src='./imgs/course1.jpg')
+        .title
+          h2 地方在住対策コース
+        .content
+          p 地方在住の方のために通信添削と月1〜2回の訪問指導によりSFCを目指すプログラムです。<br/>例年お問い合わせを数多く頂いております福岡及び近畿圏在住の方を対象としております。カフェ等にて個別指導やディスカッションを予定しています。
+      .course.course2
+        .pic
+          img(src='./imgs/course2.jpg')
+        .title
+          h2 慶應/SFC対策コース
+        .content
+          p 小論文の試験が必須となる慶應義塾大学。中でも最高峰の難易度であるSFC小論文に対応するため、受講生と講師が討論をするディスカッション型の授業システム、実際の現場に足を運ぶフィールドワークにより、慶應義塾大学/SFCへの合格力を養います。
+      .course.course3
+        .pic
+          img(src='./imgs/course3.jpg')
+        .title
+          h2 難関大コンサルティング
+        .content
+          p 早慶上智ICUやMARCH等の難関大の一般入試/AO・推薦入試合格に必要な対策のプランニングやサポートを、各メディアより取材多数の塾長(小論文、現代文、社会)を筆頭に、帰国生講師(英語)、物理オリンピック出場経験講師(物理、数学)、情報技術検定取得者(情報)といったカリスマ慶大生講師陣がチームを組んで遂行致します。
+    #subs.content
+      .sub.voice
+        pic
+          img(src='./imgs/voice.jpg')
+        .title
+          h2 合格者の声
+        .content
+          p SFCinKから慶應義塾大学合格を掴んだ卒業生の声を紹介
+      .sub.pass
+        pic
+          img(src='./imgs/gokaku.jpg')
+        .title
+          h2 合格実績
+        .content
+          p 慶應義塾大学に20名が合格通年度通塾生の合格率100%
+      .sub.books
+        pic
+          img(src='./imgs/books.jpg')
+        .title
+          h2 著者・取材
+        .content
+          p 塾長著書がエール出版より刊行新聞・雑誌・WEBなど各メディアで紹介多数!
+      .sub.teacher
+        pic
+          img(src='./imgs/teacher.jpg')
+        .title
+          h2 講師紹介
+        .content
+          p 代表今井美槻と講師陣の経歴をご紹介
+    #news.content
+      .new
+        .date
+          p 2017.07
+        .s
+          p サマーセミナーのご案内。お問合せ・お申込はこちら。
+      .new
+        .date
+          p 2017.04
+        .s
+          p 通常講習のご案内。お問合せ・お申込はこちら。
