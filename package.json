@@ -1,0 +1,31 @@
+{
+  "name": "SFCink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:pug": "pug src/templates --out dist --silent",
+    "build:scss": "node-sass src/styles --output-style nested --output dist/styles",
+    "prebuild": "rimraf dist/styles/**/*.css dist/layouts",
+    "prewatch": "npm run build",
+    "watch": "run-p watch:*",
+    "watch:pug": "pug --watch src/templates --out dist --silent",
+    "watch:scss": "node-sass --watch src/styles --output-style nested --output dist/styles"
+  },
+  "repository": "git+https://github.com/You-ReaL/SFCink.git",
+  "keywords": [],
+  "author": "taka-sho <takasho530000@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/You-ReaL/SFCink/issues"
+  },
+  "homepage": "https://github.com/You-ReaL/SFCink#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^2.6.2"
+  }
+}
