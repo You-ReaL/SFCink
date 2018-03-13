@@ -1,82 +1,108 @@
 doctype html
 head
-  link(rel='stylesheet' href='styles/common/reset.css')
-  link(rel='stylesheet' href='styles/main.css')
-  link(href='https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css' rel='stylesheet')
+  meta(name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no")
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  link(rel="stylesheet" href='styles/main.css')
+  script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous")
 body
-  include layouts/header
-  .top
-    img(src='./imgs/')
-  #contents
-    #courses.content
-      .content_title
-        h2 コース
-      .inner
-        .course.course1
-          .pic
-            img(src='./imgs/course1.jpg')
-          .title
-            h2 地方在住対策コース
-          .s
-            p 地方在住の方のために通信添削と月1〜2回の訪問指導によりSFCを目指すプログラムです。<br/>例年お問い合わせを数多く頂いております福岡及び近畿圏在住の方を対象としております。カフェ等にて個別指導やディスカッションを予定しています。
-            <span><br/>2017年度実施地域<br/>・博多<br/>・近畿圏<br/>※他地域在住の方におかれましてもお問い合わせください。<span/>
-        .course.course2
-          .pic
-            img(src='./imgs/course2.jpg')
-          .title
-            h2 慶應/SFC対策コース
-          .s
-            p 小論文の試験が必須となる慶應義塾大学。中でも最高峰の難易度であるSFC小論文に対応するため、受講生と講師が討論をするディスカッション型の授業システム、実際の現場に足を運ぶフィールドワークにより、慶應義塾大学/SFCへの合格力を養います。
-        .course.course3
-          .pic
-            img(src='./imgs/course3.jpg')
-          .title
-            h2 難関大コンサルティング
-          .s
-            p 早慶上智ICUやMARCH等の難関大の一般入試/AO・推薦入試合格に必要な対策のプランニングやサポートを、各メディアより取材多数の塾長(小論文、現代文、社会)を筆頭に、帰国生講師(英語)、物理オリンピック出場経験講師(物理、数学)、情報技術検定取得者(情報)といったカリスマ慶大生講師陣がチームを組んで遂行致します。
-    #subs.content
-      .inner
-        a(href="sfcinkvoice.html")
-          .sub.voice
-            .pic
-              img(src='./imgs/voice.jpg')
-            .title
-              h2 合格者の声
-            .s
-              p SFCinKから慶應義塾大学合格を掴んだ卒業生の声を紹介
-        a(href="goukaku.html")
-          .sub.pass
-            .pic
-              img(src='./imgs/gokaku.jpg')
-            .title
-              h2 合格実績
-            .s
-              p 慶應義塾大学に20名が合格通年度通塾生の合格率100%
-        a(href="media.html")
-          .sub.books
-            .pic
-              img(src='./imgs/books.jpg')
-            .title
-              h2 著者・取材
-            .s
-              p 塾長著書がエール出版より刊行新聞・雑誌・WEBなど各メディアで紹介多数!
-        a(href="kousi.html")
-          .sub.teacher
-            .pic
-              img(src='./imgs/teacher.jpg')
-            .title
-              h2 講師紹介
-            .s
-              p 代表今井美槻と講師陣の経歴をご紹介
-    #news.content
-      .inner
-        .new
-          .date
-            p 2017.07
-          .s
-            p サマーセミナーのご案内。お問合せ・お申込はこちら。
-        .new
-          .date
-            p 2017.04
-          .s
-            p 通常講習のご案内。お問合せ・お申込はこちら。
+  script.
+    $(function() {
+      headerAdjust('.navbar');
+      $(window).on('scroll', function() {
+          headerAdjust('.navbar');
+      });
+    });
+
+    // ヘッダーのサイズ調整
+    var adjustPoint = 20;
+    var adjustClass = 'fix';
+    function headerAdjust(tgt) {
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop > adjustPoint) {
+          $(tgt).addClass(adjustClass);
+      } else {
+          $(tgt).removeClass(adjustClass);
+      }
+    }
+  .navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+    a.navbar-brand(href='#') SFCinK
+    button.navbar-toggler(type='button' data-toggle="collapse" data-target="#navbarText")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarText
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link SFCinKとは
+        li.nav-item.active
+          a.nav-link カリキュラム
+        li.nav-item.active
+          a.nav-link 受業日・受講料
+        li.nav-item.active
+          a.nav-link 合格実績
+        li.nav-item.active
+          a.nav-link お問い合わせ
+        li.nav-item.active
+          a.nav-link アクセス
+      .navbar-text 慶應SFC・難関私大対策専門予備校
+  .container-fluid
+    .row
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+      .col-12.col-sm-12.col-md-10.col-lg-10.col-xl-10
+        h1 選べる3つのコース
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+    .row
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+      .col-12.col-sm-12.col-md-10.col-lg-10.col-xl-10
+        .container-fluid
+          .row
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-4
+              .card
+                img.card-img-top(src='imgs/course1.jpg')
+                .card-body
+                  h5.card-title 地方在住対策コース
+                  p.card-text 地方在住の方のために通信添削と月1〜2回の訪問指導によりSFCを目指すプログラムです。例年お問い合わせを数多く頂いております福岡及び近畿圏在住の方を対象としております。カフェ等にて個別指導やディスカッションを予定しています。
+                  a.btn.btn-primary 詳しく見る
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-4
+              .card
+                img.card-img-top(src='imgs/course2.jpg')
+                .card-body
+                  h5.card-title 慶應/SFC対策コース
+                  p.card-text 小論文の試験が必須となる慶應義塾大学。中でも最高峰の難易度であるSFC小論文に対応するため、受講生と講師が討論をするディスカッション型の授業システム、実際の現場に足を運ぶフィールドワークにより、慶應義塾大学/SFCへの合格力を養います。
+                  a.btn.btn-primary Go
+            .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4
+              .card
+                img.card-img-top(src='imgs/course3.jpg')
+                .card-body
+                  h5.card-title 難関大コンサルティング
+                  p.card-text 早慶上智ICUやMARCH等の難関大の一般入試/AO・推薦入試合格に必要な対策のプランニングやサポートを、各メディアより取材多数の塾長(小論文、現代文、社会)を筆頭に、帰国生講師(英語)、物理オリンピック出場経験講師(物理、数学)、情報技術検定取得者(情報)といったカリスマ慶大生講師陣がチームを組んで遂行致します。
+                  a.btn.btn-primary Go
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+  .container-fluid
+    .row
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+      .col-12.col-sm-12.col-md-10.col-lg-10.col-xl-10
+        .container-fluid
+          .row
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+              .jumbotron
+                h1.display-6 合格者の声
+                p.lead SFCinKから慶應義塾大学合格を掴んだ卒業生の声を紹介
+                a.btn.btn-primary.btn-lg(href='#' role='button') GO
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+              .jumbotron
+                h1.display-6 合格実績
+                p.lead 慶應義塾大学に20名が合格。通年度通塾生の合格率100%
+                a.btn.btn-primary.btn-lg(href='#' role='button') GO
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+              .jumbotron
+                h1.display-6 著書・取材
+                p.lead 塾長著書がエール出版より刊行新聞・雑誌・WEBなど各メディアで紹介多数!
+                a.btn.btn-primary.btn-lg(href='#' role='button') GO
+            .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+              .jumbotron
+                h1.display-6 講師紹介
+                p.lead 代表の今井美槻と講師陣の経歴をご紹介
+                a.btn.btn-primary.btn-lg(href='#' role='button') GO
+      .col-0.col-sm-0.col-md-1.col-lg-1.col-xl-1
+  script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
