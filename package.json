@@ -9,6 +9,7 @@
     "build:scss": "node-sass src/styles --output-style nested --output dist/styles",
     "prebuild": "rimraf dist/styles/**/*.css dist/layouts",
     "prewatch": "npm run build",
+    "test": "stylelint src/styles/**/*.scss",
     "watch": "run-p watch:*",
     "watch:pug": "pug --watch src/templates --out dist --silent",
     "watch:scss": "node-sass --watch src/styles --output-style nested --output dist/styles"
@@ -23,9 +24,11 @@
   "homepage": "https://github.com/You-ReaL/SFCink#readme",
   "dependencies": {},
   "devDependencies": {
+    "@takasho/stylelint-config": "^0.0.10",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "pug-cli": "^1.0.0-alpha6",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "stylelint": "^9.1.1"
   }
 }

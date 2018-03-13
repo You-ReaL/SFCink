@@ -1,35 +1,41 @@
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif !important;
-  // font-family: "Rounded Mplus 1c";
   font-weight: 300;
 }
 
 .navbar {
-  transition: .3s ease;
-  background-color: rgba(230,230,255,.95) !important;
+  transition: 300ms ease;
+  background-color: rgba(230, 230, 255, 0.95) !important;
 
   &:not(.fix) {
     padding-top: 25px;
     padding-bottom: 25px;
-    a.navbar-brand{
+
+    a.navbar-brand {
       font-size: 36px;
-      transition: .3s ease;
+      transition: 300ms ease;
     }
   }
+
   &.fix {
     padding-top: 0;
     padding-bottom: 0;
+
     a.navbar-brand {
-      font-size: 24px;
-      transition: .3s ease;
+      font-size: 28px;
+      transition: 300ms ease;
     }
   }
 }
 
-body>.container-fluid {
-  margin-top: 150px;
+body > .container-fluid {
+  margin-top: 150;
 }
 
 .card {
-  margin-bottom: 30px;
+  margin-bottom: 30;
 }
