@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@takasho/stylelint-config@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@takasho/stylelint-config/-/stylelint-config-0.0.10.tgz#95d1a27f38ab75e9137aa90eef5b3f442a809ed8"
+"@takasho/stylelint-config@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@takasho/stylelint-config/-/stylelint-config-0.0.11.tgz#9358788e8ec49cfe73ac1c6b63f5339c96a913e2"
   dependencies:
     stylelint-config-standard "^18.2.0"
 

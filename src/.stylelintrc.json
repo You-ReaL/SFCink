@@ -1,6 +1,0 @@
-{
-  "extends": "@takasho/stylelint-config",
-  "rules": {
-    "unit-whitelist": ["px", "%", "deg", "ms", "vh", "vw"]
-  }
-}
