@@ -24,7 +24,7 @@
   "homepage": "https://github.com/You-ReaL/SFCink#readme",
   "dependencies": {},
   "devDependencies": {
-    "@takasho/stylelint-config": "^0.0.11",
+    "@takasho/stylelint-config": "^1.0.0",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "pug-cli": "^1.0.0-alpha6",
